@@ -1,0 +1,16 @@
+Sprint 0 (09/11):
+-mise en place de l'équipe et de l'organisation
+-mise en place du repository git
+-creation du fichier readme.md
+-creation du fichier functions.txt
+-creation du fichier backlog.txt
+
+Sprint 1:
+
+Sprint 2:
+
+Sprint 3:
+
+
+
+
