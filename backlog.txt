@@ -1,10 +1,8 @@
-Sprint 0 (09/11):
--mise en place de l'équipe et de l'organisation
--mise en place du repository git
--creation du fichier readme.md
--creation du fichier functions.txt
--creation du fichier backlog.txt
+Sprint 1 :
+-Permettre à l'utilisateur de créer son propre labyrinthe
+-Créer un labyrinthe avec bordure et obstacles, case arrivée, case passage, case piège, case magique, à partir d'un fichier.
 
+<<<<<<< HEAD
 Sprint1 (16/11):
 Familiarisation avec les templates
 Implémentation des fonctionnalités du héros:
@@ -22,6 +20,13 @@ Creation cases speciales:
 	-Cases magiques
 	-Cases trésors
 	-Cases passages
+=======
+
+
+Sprint 2 : 
+-Le héros a des points de vies
+-Le héros peut se déplacer dans les 4 directions
+>>>>>>> c0347789a5c913d9cf60f5a23d6b710d3c2987d4
 
 Sprint 4
 Generation monstres:
@@ -33,5 +38,20 @@ Dernières retouches:
 	-Interface finale
 	-Textures si pas déjà implémentées
 
+Sprint 3 :
+-Il y a des monstres placé aléatoirement sauf sur la case de départ et l'arrivée (immobiles )
+-Monstres se déplacent aléatoirement
+-Les fantômes sont des monstres passant à travers les obstacles mais ne quittent pas le labyrinthe.
 
 
+Sprint 4:
+-Le héros est tué si il est sur la même case qu'un monstre 
+-Le héros peut attaquer les monstres quand ils sont sur la même cas
+-Le héros peut attaquer les monstres adjacents
+-les monstres essayent de suivre le héros 
+
+
+Sprint 5:
+-création interface graphique 
+-Amélioration interface graphique
+-Implémenter toutes les fonctionnalités précédentes dans l'interface graphique 
