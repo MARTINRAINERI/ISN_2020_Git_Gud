@@ -5,12 +5,33 @@ Sprint 0 (09/11):
 -creation du fichier functions.txt
 -creation du fichier backlog.txt
 
-Sprint 1:
+Sprint1 (16/11):
+Familiarisation avec les templates
+Implémentation des fonctionnalités du héros:
+	-Deplacement
+	-Attaque
+	-Textures
 
-Sprint 2:
+Sprint 2
+Creation labyrinthe:	
+	-Differents niveaux pré-crées
 
-Sprint 3:
+Sprint 3
+Creation cases speciales:
+	-Cases pièges
+	-Cases magiques
+	-Cases trésors
+	-Cases passages
 
+Sprint 4
+Generation monstres:
+	-Deplacement(vers le héros)
+	-Attaque
+
+Sprint 5
+Dernières retouches:
+	-Interface finale
+	-Textures si pas déjà implémentées
 
 
 
