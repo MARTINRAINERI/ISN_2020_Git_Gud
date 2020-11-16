@@ -2,7 +2,6 @@ Sprint 1 :
 -Permettre à l'utilisateur de créer son propre labyrinthe
 -Créer un labyrinthe avec bordure et obstacles, case arrivée, case passage, case piège, case magique, à partir d'un fichier.
 
-<<<<<<< HEAD
 Sprint1 (16/11):
 Familiarisation avec les templates
 Implémentation des fonctionnalités du héros:
@@ -20,13 +19,11 @@ Creation cases speciales:
 	-Cases magiques
 	-Cases trésors
 	-Cases passages
-=======
 
 
 Sprint 2 : 
 -Le héros a des points de vies
 -Le héros peut se déplacer dans les 4 directions
->>>>>>> c0347789a5c913d9cf60f5a23d6b710d3c2987d4
 
 Sprint 4
 Generation monstres:
