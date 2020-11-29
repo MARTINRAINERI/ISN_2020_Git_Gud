@@ -6,7 +6,7 @@ public class Assets {
 	private static final int width=20, height=20;
 	public static BufferedImage player, Trap, luck,obstacle, grass, teleport,begin,end;
 	public static void init() {
-		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/spritesheetv2.png"));
+		SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/imgpsh_mobile_save.jpg"));
 		player=sheet.crop(0,0,width,height);
 		Trap=sheet.crop(width,0,width,height);
 		luck=sheet.crop(width*2,0,width,height);
