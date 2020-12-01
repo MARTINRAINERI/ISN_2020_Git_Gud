@@ -1,11 +1,16 @@
 package gameOil;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Player extends Creature {
 
-	public Player(Game game,float x, float y) {
-		super(game,x, y,Creature.DEFAULT_CREATURE_WIDTH,Creature.DEFAULT_CREATURE_HEIGHT);
+	public Player(Handler handler,float x, float y) {
+		super(handler,x, y,Creature.DEFAULT_CREATURE_WIDTH,Creature.DEFAULT_CREATURE_HEIGHT);
+		bounds.x=20;
+		bounds.y=20;
+		bounds.width=20;
+		bounds.height=30;
 		
 	}
 
@@ -13,30 +18,31 @@ public class Player extends Creature {
 	public void tick() {
 		getInput();
 		move();
-		game.getGameCamera().centerOnEntity(this);
+		handler.getGameCamera().centerOnEntity(this);
 	}
 	private void getInput() {
 		xMove=0;
 		yMove=0;
-		if(game.getKeyManager().up)
+		if(handler.getKeyManager().up)
 			yMove=-speed;
-		if(game.getKeyManager().down)
+		if(handler.getKeyManager().down)
 			yMove=speed;
-		if(game.getKeyManager().left)
+		if(handler.getKeyManager().left)
 			xMove=-speed;
-		if(game.getKeyManager().right)
+		if(handler.getKeyManager().right)
 			xMove=speed;
-		if(game.getKeyManager().up & game.getKeyManager().down) {
+		if(handler.getKeyManager().up & handler.getKeyManager().down) {
 			yMove=0;
 		}
-		if(game.getKeyManager().left & game.getKeyManager().right) {
+		if(handler.getKeyManager().left & handler.getKeyManager().right) {
 			xMove=0;
 		}
 	}
 
 	@Override
 	public void render(Graphics g) {
-		g.drawImage(Assets.player, (int)(x-game.getGameCamera().getXoffset()),(int)(y-game.getGameCamera().getYoffset()),width,height,null);
+		g.drawImage(Assets.player, (int)(x-handler.getGameCamera().getXoffset()),(int)(y-handler.getGameCamera().getYoffset()),width,height,null);
+		
 	}
 
 }

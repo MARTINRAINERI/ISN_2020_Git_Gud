@@ -19,6 +19,10 @@ public class Game  implements Runnable{
 	private KeyManager keyManager;
 	//Camera
 	private GameCamera gameCamera;
+	//Handler
+	private Handler handler;
+	
+	
 	public Game(String title, int width, int height) {
 		this.width= width;
 		this.height=height;
@@ -32,8 +36,9 @@ public class Game  implements Runnable{
 		display.getFrame().addKeyListener(keyManager);
 		Assets.init();
 		gameCamera= new GameCamera(this,0,0);
-		gameState= new GameState(this);
-		menuState= new MenuState(this);
+		handler = new Handler(this);
+		gameState= new GameState(handler);
+		menuState= new MenuState(handler);
 		State.setState(gameState);
 		display.getFrame().addMouseListener(mouseManager);
 		display.getFrame().addMouseMotionListener(mouseManager);
@@ -89,7 +94,6 @@ public class Game  implements Runnable{
 				
 			}
 			if (timer>=1000000000) {
-				System.out.println("Ticks and Frames"+ticks);
 				ticks=0;
 				timer=0;
 			}

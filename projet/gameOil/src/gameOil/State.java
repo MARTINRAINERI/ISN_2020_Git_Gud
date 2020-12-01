@@ -13,9 +13,9 @@ public abstract class State {
 	}
 	
 	//ClASS nothing to do with the code above
-	protected Game game;
-	public State(Game game) {
-		this.game=game;
+	protected Handler handler;
+	public State(Handler handler) {
+		this.handler=handler;
 	}
 	public abstract void tick();
 	public abstract void render(Graphics g);

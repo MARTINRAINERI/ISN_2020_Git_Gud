@@ -5,10 +5,12 @@ import java.awt.Graphics;
 public class GameState extends State {
 	private Player player;
 	private world world;
-	public GameState(Game game) {
-		super(game);
-		player= new Player(game,100,100);
-		world= new world(game,"world1.txt");
+	public GameState(Handler handler) {
+		super(handler);
+		world= new world(handler,"world1.txt");
+		handler.setWorld(world);
+		player= new Player(handler,100,100);
+		
 		
 		
 	}

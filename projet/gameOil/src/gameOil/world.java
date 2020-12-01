@@ -3,13 +3,13 @@ package gameOil;
 import java.awt.Graphics;
 
 public class world {
-	private Game game;
+	private Handler handler;
 	private int width,height;
 	private int spawnx, spawny ;
 	private int[][] tiles;
 	
-	public world(Game game,String path) {
-		this.game=game;
+	public world(Handler handler,String path) {
+		this.handler=handler;
 		loadworld(path);
 		
 	}
@@ -17,20 +17,22 @@ public class world {
 		
 	}
 	public void render(Graphics g) {
-		int xStart =(int)Math.max(0, game.getGameCamera().getXoffset()/Tile.TILEWIDTH);
-		int xEnd=(int)Math.min(width, (game.getGameCamera().getXoffset()+game.getWidth())/Tile.TILEWIDTH+1);
-		int yStart=(int) Math.max(0, game.getGameCamera().getYoffset()/Tile.TILEHEIGHT);
-		int yEnd=(int)Math.min(height, (game.getGameCamera().getYoffset()+game.getHeight())/Tile.TILEHEIGHT+1);
+		int xStart =(int)Math.max(0, handler.getGameCamera().getXoffset()/Tile.TILEWIDTH);
+		int xEnd=(int)Math.min(width, (handler.getGameCamera().getXoffset()+handler.getWidth())/Tile.TILEWIDTH+1);
+		int yStart=(int) Math.max(0, handler.getGameCamera().getYoffset()/Tile.TILEHEIGHT);
+		int yEnd=(int)Math.min(height, (handler.getGameCamera().getYoffset()+handler.getHeight())/Tile.TILEHEIGHT+1);
 		
 		for(int y=yStart; y<yEnd;y++) {
 			for(int x=xStart; x<xEnd; x++) {
-				getTile(x,y).render(g,(int)( x*Tile.TILEWIDTH-game.getGameCamera().getXoffset()),(int)( y*Tile.TILEHEIGHT-game.getGameCamera().getYoffset()));
+				getTile(x,y).render(g,(int)( x*Tile.TILEWIDTH-handler.getGameCamera().getXoffset()),(int)( y*Tile.TILEHEIGHT-handler.getGameCamera().getYoffset()));
 				
 			}
 		}
 		
 	}
 	public Tile getTile(int x, int y) {
+		if(x<0 || y<0 || x>=width || y>=height)
+			return Tile.grassTile;
 		Tile t= Tile.tiles[tiles[x][y]];
 		if(t == null)
 			return Tile.rockTile;
