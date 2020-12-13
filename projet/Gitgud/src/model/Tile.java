@@ -13,8 +13,10 @@ public abstract class Tile {
 											// exemple: findSource("123") -> "1/2/3.png"
 		String source = "img/";
 		String[] liste_repertoire = in_source.split("");
+		
 		for(int i=0;i<liste_repertoire.length;i++) {
-			source+=liste_repertoire[i]+"/";			
+			System.out.println(liste_repertoire[i]);
+			source+=liste_repertoire[i]+"/";	
 		}
 		source=source.substring(0, source.length() - 1);
 		source+=".png";
