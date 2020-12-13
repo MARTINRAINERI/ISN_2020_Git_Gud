@@ -30,7 +30,8 @@ public class LabyrinthePainter {
 					crayon_lab.drawImage(img, largeur_rect*i, hauteur_rect*j, largeur_rect*(i+1) , hauteur_rect*(j+1), 0, 0, img.getWidth(null), img.getWidth(null), null);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Il y a un soucis dans le fichier de niveau");
+					System.exit(0);
 				}
 			}
 		}

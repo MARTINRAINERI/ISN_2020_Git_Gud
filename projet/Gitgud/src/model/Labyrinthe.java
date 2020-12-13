@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Labyrinthe {
 	protected static int nb_largeur; // Le nombre de case en largeur du labyrinthe
 	protected static int nb_hauteur; // Le nombre de case en hauteur du labyrinthe
-	protected  int nb_case;			// Le produit des deux attributs précédents
+	protected int nb_case;			// Le produit des deux attributs précédents
 	protected static int Tile_length; //La taille en pixel d'une case du labyrinthe
 									//et donc que chacune des cases est un carré
 	protected int level;			// Le niveau attribué au labyrinthe
@@ -22,7 +22,6 @@ public class Labyrinthe {
 	public int[]spawn=new int[2];		// Coordonnées (i,j) représentant la case où le joueur doit apparaitre
 	public ArrayList<int[]> spawnMonsters=new ArrayList<int[]>(); //Comme précédemment sauf qu'il s'agit des monstres et il peut y en avoir plusieurs
 	
-	
 	public Labyrinthe(String source) {
 		rowRead=1;
 		BufferedReader LabReader;
@@ -30,7 +29,13 @@ public class Labyrinthe {
 			LabReader = new BufferedReader(new FileReader(source));
 			this.setLengthParameters(LabReader); // Lit les paramètres de taille du labyrinthe et définit les attributs correspondants
 			cases = new Tile[nb_largeur][nb_hauteur]; // On peut alors définit plus précisément l'attribut cases
-			this.setCases(LabReader);  //Par la suite, on déchiffre le code fournit pour générer le labyrinthe 
+			try {
+				this.setCases(LabReader);  //Par la suite, on déchiffre le code fournit pour générer le labyrinthe 
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Il y a un soucis dans les dimensions du fichier de niveau");
+				System.exit(0);
+			}
 									  //cela revient à définir quel type de Tile représente la case (i,j)
 		//On lève des exceptions au cas où (obligatoire pour compiler)
 		} catch (FileNotFoundException e) {
@@ -80,7 +85,13 @@ public class Labyrinthe {
 				liste_param = ligne.split("#");
 				for(int j=0;j<liste_param.length;j++) {
 					param=liste_param[j].split("");
-					nat=Integer.parseInt(param[0]);
+					try {
+						nat=Integer.parseInt(param[0]);
+					} catch (NumberFormatException e) {
+						// TODO Auto-generated catch block
+						System.out.println("Il y a un soucis dans le fichier de niveau");
+						System.exit(0);
+					}
 					switch(nat) {
 					case 0:
 						this.cases[j][i]=new Wall(liste_param[j]); 

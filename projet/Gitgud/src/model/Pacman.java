@@ -37,7 +37,6 @@ public class Pacman  extends Personnage{
 	public void collisionUP() {
 			Y=Y+1;
 			updateHitbox();
-			System.out.println("*BUMP*");
 	}
 	
 	public void moveDOWN() {
@@ -49,7 +48,6 @@ public class Pacman  extends Personnage{
 	public void collisionDOWN() {
 		Y=Y-1;
 		updateHitbox();
-		System.out.println("*BUMP*");
 	}
 	
 	public void moveLEFT() {
@@ -61,7 +59,6 @@ public class Pacman  extends Personnage{
 	public void collisionLEFT() {
 		X=X+1;
 		updateHitbox();
-		System.out.println("*BUMP*");
 	}
 	
 	public void moveRIGHT() {
@@ -73,6 +70,5 @@ public class Pacman  extends Personnage{
 	public void collisionRIGHT() {
 		X=X-1;
 		updateHitbox();
-		System.out.println("*BUMP*");
 	}
 }

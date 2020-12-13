@@ -79,30 +79,35 @@ public class PacmanGame implements Game {
 			break;
 		}
 		//evolve monsters
+		//&& (donjon.cases[monstres[i].X/l+1][monstres[i].Y/l].canWalkOn)
+		//&& (donjon.cases[monstres[i].X/l-1][monstres[i].Y/l].canWalkOn)
+		//&& (donjon.cases[monstres[i].X/l][monstres[i].Y/l-1].canWalkOn)
+		//&& (donjon.cases[monstres[i].X/l][monstres[i].Y/l+1].canWalkOn)
 		for(int i=0;i<monstres.length;i++) {
 			Random r = new Random();
 	        int n = r.nextInt(4);
 	        int l=Labyrinthe.Tile_length;
 			switch (n) {
 				case 0:
-					if((monstres[i].X<MainPainter.WIDTH-l) && (donjon.cases[monstres[i].X/l+1][monstres[i].Y/l].canWalkOn))
-						monstres[i].X+=l;
+					if((monstres[i].X<MainPainter.WIDTH-l)) 
+						monstres[i].X+=10;
 					break;
 				case 2:
-					if((monstres[i].X>=l) && (donjon.cases[monstres[i].X/l-1][monstres[i].Y/l].canWalkOn))
-						monstres[i].X-=l;
+					if((monstres[i].X>=l))
+						monstres[i].X-=10;
 					break;
 				case 1:
-					if((monstres[i].Y>=l) && (donjon.cases[monstres[i].X/l][monstres[i].Y/l-1].canWalkOn))
-						monstres[i].Y-=l;
+					if((monstres[i].Y>=l))
+						monstres[i].Y-=10;
 					break;
 					
 				case 3:
-					if((monstres[i].Y<MainPainter.WIDTH-l)&& (donjon.cases[monstres[i].X/l][monstres[i].Y/l+1].canWalkOn))
-						monstres[i].Y+=l;
+					if((monstres[i].Y<MainPainter.WIDTH-l))
+						monstres[i].Y+=10;
 					break;
 				}
 				}	
+
 	}
 
 	/**

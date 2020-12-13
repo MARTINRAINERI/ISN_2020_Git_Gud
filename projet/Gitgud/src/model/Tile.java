@@ -15,7 +15,6 @@ public abstract class Tile {
 		String[] liste_repertoire = in_source.split("");
 		
 		for(int i=0;i<liste_repertoire.length;i++) {
-			System.out.println(liste_repertoire[i]);
 			source+=liste_repertoire[i]+"/";	
 		}
 		source=source.substring(0, source.length() - 1);
