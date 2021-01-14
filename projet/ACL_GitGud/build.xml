@@ -10,7 +10,7 @@
 
 <property name="jar.dir" value="${build.dir}/jar"/>
 
-<property name="main-class" value="game.main.ACL_GitGud"/>
+<property name="main-class" value="game.main.Launcher"/>
 
 
 <target name="clean">
