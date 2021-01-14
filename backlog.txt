@@ -1,15 +1,16 @@
 Fonctionnalites:
 -Permettre à l'utilisateur de créer son propre labyrinthe
--Créer un labyrinthe avec bordure et obstacles, case arrivée, case passage, case piège, case magique, à partir d'un fichier.
+-Créer un labyrinthe avec bordure et obstacles, case arrivée, case piège, case magique, à partir d'un fichier.
 -Le héros a des points de vies
 -Le héros peut se déplacer dans les 4 directions
--Il y a des monstres placé aléatoirement sauf sur la case de départ et l'arrivée (immobiles )
+-Il y a des monstres sauf sur la case de départ et l'arrivée 
 -Monstres se déplacent aléatoirement
 -Les fantômes sont des monstres passant à travers les obstacles mais ne quittent pas le labyrinthe.
--Le héros est tué si il est sur la même case qu'un monstre 
--Le héros peut attaquer les monstres quand ils sont sur la même cas
--Le héros peut attaquer les monstres adjacents
--les monstres essayent de suivre le héros 
+-Le héros perd des points de vie au contact des monstres
+-Le héros perd des points lorsqu'il passe sur une case piège
+-Le héros meurt lorsqu'il n'a plus de points de vie
+-Le héros peut attaquer les monstres en tirant des projectiles qu'il ramasse
+-les fantômes essayent de suivre le héros 
 -création interface graphique 
 -Amélioration interface graphique
 -Implémenter toutes les fonctionnalités précédentes dans l'interface graphique
@@ -28,7 +29,7 @@ Sprint 0 (09/11):
 
 Sprint 1 (16/11):
 -Permettre à l'utilisateur de créer son propre labyrinthe
--Créer un labyrinthe avec bordure et obstacles, case arrivée, case passage, case piège, case magique, à partir d'un fichier.
+-Créer un labyrinthe avec bordure et obstacles, case arrivée, case piège, case magique, à partir d'un fichier.
 -Creation de l'interface graphique pour le labyrinthe
 -Conception du diagramme use-case
  
@@ -36,22 +37,22 @@ Sprint 1 (16/11):
 Sprint 2 : 
 -Le héros a des points de vies
 -Le héros peut se déplacer dans les 4 directions
- 
+ -Conception du diagramme de classe
 
 Sprint 3 :
--Il y a des monstres placé aléatoirement sauf sur la case de départ et l'arrivée (immobiles )
+-Il y a des monstres sauf sur la case de départ et l'arrivée
 -Monstres se déplacent aléatoirement
 -Les fantômes sont des monstres passant à travers les obstacles mais ne quittent pas le labyrinthe.
  
 
 Sprint 4:
--Le héros est tué si il est sur la même case qu'un monstre 
--Le héros peut attaquer les monstres quand ils sont sur la même cas
--Le héros peut attaquer les monstres adjacents
--les monstres essayent de suivre le héros 
+-Le héros perd des points de vie au contact des monstres
+-Le héros meurt lorsqu'il n'a plus de points de vie
+-Le héros peut attaquer les monstres en tirant des projectiles qu'il ramasse
+-les fantômes essayent de suivre le héros 
  
 
 Sprint 5:
--création interface graphique 
--Amélioration interface graphique
--Implémenter toutes les fonctionnalités précédentes dans l'interface graphique
+-Correction des derniers bugs
+-Correction des diagrammes
+-Tests ant
